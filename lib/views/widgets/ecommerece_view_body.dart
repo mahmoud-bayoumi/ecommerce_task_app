@@ -1,4 +1,3 @@
-
 import 'package:ecommerce_task_app/views/widgets/categories_section.dart';
 import 'package:ecommerce_task_app/views/widgets/custom_product_image.dart';
 import 'package:ecommerce_task_app/views/widgets/featured_products_section.dart';
@@ -10,6 +9,7 @@ class EcommereceViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      padding: EdgeInsets.symmetric(horizontal: 8),
       child: Column(
         children: [
           CustomProductImage(),

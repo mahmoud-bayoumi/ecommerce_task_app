@@ -22,14 +22,12 @@ class ProductCard extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SizedBox(
-                height: 10,
-              ),
               FavoriteIcon(),
               Image.network(
                 product.imageUrl,
                 width: 150,
                 height: 150,
+                fit: BoxFit.cover,
               ),
               Text(
                 product.price,
@@ -58,6 +56,9 @@ class ProductCard extends StatelessWidget {
               product.isAddedToCart
                   ? ProductCounterRow(quantity: product.quantity!)
                   : AddToCartButton(),
+              SizedBox(
+                height: 10,
+              ),
             ],
           ),
         ),

@@ -58,7 +58,7 @@ class FeaturedProductsSection extends StatelessWidget {
             crossAxisCount: 2,
             crossAxisSpacing: 10,
             mainAxisSpacing: 15,
-            childAspectRatio: 0.6,
+            childAspectRatio: 0.52,
           ),
           itemBuilder: (context, index) {
             return ProductCard(
