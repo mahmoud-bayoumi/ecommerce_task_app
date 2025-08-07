@@ -1,175 +1,177 @@
-    # Ecommerce Task App
 
-    This is a Flutter application that replicates a modern **Ecommerce UI layout**, focusing on building reusable widgets, clean UI sections, and responsive design principles. The app displays an ecommerce interface with product categories, featured products, and demonstrates modern UI patterns using Flutter's core widgets.
+# 🛒 Ecommerce Task App
 
-    ---
+A Flutter application that replicates a modern **Ecommerce UI**, focused on **reusable widgets**, **clean UI design**, and **responsive layout principles**. This app showcases product categories, featured items, and modern interface patterns using Flutter’s core capabilities.
 
-    ## 📱 Features
+---
 
-    * **Custom AppBar** with search and menu icons
-    * **Bottom Navigation Bar** for main sections (Home, Profile, Favorites)
-    * **Product Categories** section with icons and colors
-    * **Featured Products** grid with product images, prices, and add-to-cart functionality
-    * **Reusable UI Components** (buttons, section headers, product cards)
-    * **Responsive design** for different screen sizes
-    * **Smooth scrolling** with bounce physics
-    * **Modular widget architecture** for maintainable code
+## 📱 Features
 
-    ---
+- ✅ Custom AppBar with search and menu icons  
+- ✅ Bottom Navigation Bar (Home, Profile, Favorites)  
+- ✅ Horizontal product **categories** section with icons and colors  
+- ✅ Grid of **Featured Products** with images, prices, and add-to-cart buttons  
+- ✅ Reusable UI components (buttons, headers, product cards)  
+- ✅ Responsive design for various screen sizes  
+- ✅ Smooth scrolling with bounce physics  
+- ✅ Modular widget structure for maintainable code  
 
-    ## 📂 Project Structure
+---
 
-    ```
-    lib/
-    ├── main.dart                                    # App entry point
-    ├── models/
-    │    └── product_model.dart                      # Product data model
-    ├── views/
-    │    ├── ecommerce_view.dart                     # Main Scaffold with AppBar & Bottom Navigation
-    │    └── widgets/
-    │         ├── add_to_cart_button.dart            # Add to cart button widget
-    │         ├── categories_list_view.dart          # Horizontal list of product categories
-    │         ├── categories_section.dart            # Section for categories
-    │         ├── category_icon.dart                 # Icon for each category
-    │         ├── custom_bottom_navigation_bar.dart  # Bottom navigation bar
-    │         ├── custom_product_image.dart          # Main product image banner
-    │         ├── custom_section_header.dart         # Section header widget
-    │         ├── ecommerece_view_body.dart          # Home screen content composition
-    │         ├── featured_products_section.dart     # Featured products grid section
-    │         ├── favorite_icon.dart                 # Favorite (wishlist) icon
-    │         ├── product_card.dart                  # Individual product display widget
-    │         ├── product_counter_row.dart           # Counter for product quantity in cart
-    assets/
-    └── images/                                      # (Add your product images here)
-    ```
+## 📂 Project Structure
 
-    ---
+```
 
-    ## 🚀 Getting Started
+lib/
+├── main.dart                                  # App entry point
+├── models/
+│   └── product\_model.dart                     # Product data model
+├── views/
+│   ├── ecommerce\_view\.dart                    # Main scaffold with AppBar and navigation
+│   └── widgets/
+│       ├── add\_to\_cart\_button.dart            # Add to cart button
+│       ├── categories\_list\_view\.dart          # Horizontal list of categories
+│       ├── categories\_section.dart            # Section container for categories
+│       ├── category\_icon.dart                 # Category icon widget
+│       ├── custom\_bottom\_navigation\_bar.dart  # Bottom nav bar
+│       ├── custom\_product\_image.dart          # Header/banner product image
+│       ├── custom\_section\_header.dart         # Section title with arrow
+│       ├── ecommerece\_view\_body.dart          # Body of ecommerce screen
+│       ├── featured\_products\_section.dart     # Featured products grid
+│       ├── favorite\_icon.dart                 # Wishlist/favorite icon
+│       ├── product\_card.dart                  # Individual product widget
+│       ├── product\_counter\_row\.dart           # Cart quantity counter
+assets/
+└── images/                                    # Add product/category images here
 
-    ### Prerequisites
+````
 
-    * Flutter SDK (3.x.x)
-    * Dart SDK
-    * IDE (VSCode, Android Studio, IntelliJ, etc.)
+---
 
-    ### Run Locally
+## 🚀 Getting Started
 
-    1. **Clone the Repository**:
+### ✅ Prerequisites
 
-    ```bash
-    git clone https://github.com/your-username/ecommerce_task_app.git
-    cd ecommerce_task_app
-    ```
+- Flutter SDK (>=3.x.x)  
+- Dart SDK  
+- A code editor like VSCode or Android Studio  
 
-    2. **Add Assets**:
+---
 
-    * Place your images in: `assets/images/`
-    * Update image paths in widgets if needed
+### 🧪 Run the App Locally
 
-    3. **Update `pubspec.yaml`** (add your assets):
+1. **Clone the repository**
 
-    ```yaml
-    flutter:
-        assets:
-        - assets/images/
-    ```
+```bash
+git clone https://github.com/your-username/ecommerce_task_app.git
+cd ecommerce_task_app
+````
 
-    4. **Get Dependencies**:
+2. **Add your assets**
 
-    ```bash
-    flutter pub get
-    ```
+Place your images inside:
 
-    5. **Run the App**:
+```
+assets/images/
+```
 
-    ```bash
-    flutter run
-    ```
+3. **Update `pubspec.yaml`**
 
-    ---
+Make sure you declare your assets like this:
 
-    ## 🧩 Code Overview
+```yaml
+flutter:
+  assets:
+    - assets/images/
+```
 
-    | File                                    | Description                                                    |
-    | --------------------------------------- | -------------------------------------------------------------- |
-    | `main.dart`                             | App entry point, initializes `EcommerceTaskApp` widget.        |
-    | `ecommerce_view.dart`                   | Main Scaffold with AppBar, bottom navigation, and body content.|
-    | `ecommerece_view_body.dart`             | Composes all home screen widgets in scrollable layout.         |
-    | `custom_bottom_navigation_bar.dart`     | Bottom navigation bar for main sections.                       |
-    | `custom_product_image.dart`             | Main product image/banner at the top.                          |
-    | `categories_section.dart`               | Section for product categories.                                |
-    | `categories_list_view.dart`             | Horizontal list of category icons.                             |
-    | `category_icon.dart`                    | Icon for each category.                                        |
-    | `custom_section_header.dart`            | Section header with title and arrow.                           |
-    | `featured_products_section.dart`        | Grid of featured products.                                     |
-    | `product_card.dart`                     | Individual product display with image, price, and actions.     |
-    | `add_to_cart_button.dart`               | Add to cart button for products.                               |
-    | `favorite_icon.dart`                    | Favorite (wishlist) icon for products.                         |
-    | `product_counter_row.dart`              | Counter for product quantity in cart.                          |
-    | `product_model.dart`                    | Data model for products.                                       |
+4. **Install dependencies**
 
-    ---
+```bash
+flutter pub get
+```
 
-    ## 🎨 UI Components
+5. **Run the app**
 
-    ### Navigation
-    - **Bottom Navigation Bar**: Switch between Home, Profile, and Favorites
-    - **AppBar**: Search and menu icons for quick access
+```bash
+flutter run
+```
 
-    ### Content Sections
-    - **Product Image Banner**: Large image at the top for promotions or highlights
-    - **Categories**: Horizontal scrollable list of product categories
-    - **Featured Products**: Grid of products with images, prices, and add-to-cart
+---
 
-    ### Interactive Elements
-    - **Add to Cart Button**: Add products to cart with a single tap
-    - **Favorite Icon**: Mark products as favorite/wishlist
-    - **Product Counter**: Adjust quantity for products in the cart
+## 🧩 Code Overview
 
-    ---
+| File                             | Description                                            |
+| -------------------------------- | ------------------------------------------------------ |
+| `main.dart`                      | App entry point, launches the root widget              |
+| `ecommerce_view.dart`            | Main scaffold with AppBar and bottom navigation        |
+| `ecommerece_view_body.dart`      | Scrollable layout combining all UI sections            |
+| `custom_product_image.dart`      | Large header/banner product image                      |
+| `categories_section.dart`        | Contains the category list                             |
+| `categories_list_view.dart`      | Horizontal scrollable category items                   |
+| `category_icon.dart`             | Reusable widget for each category icon                 |
+| `featured_products_section.dart` | Section that displays featured products in grid layout |
+| `product_card.dart`              | Product UI with image, price, and actions              |
+| `add_to_cart_button.dart`        | Reusable add to cart button                            |
+| `favorite_icon.dart`             | Favorite (wishlist) heart icon                         |
+| `product_counter_row.dart`       | Widget to increase/decrease product quantity in cart   |
+| `product_model.dart`             | Data model representing product fields                 |
 
-    ## 📸 Screenshots
+---
 
-    | Ecommerce UI Example                                                                                                                   |
-    | ------------------------------------------------------------------------------------------------------------------------------------- |
-<<<<<<< HEAD
-    | <img width="600" alt="Screenshot_EcommerceUI" src="https://github.com/user-attachments/assets/your-screenshot-1.png" /> |
+## 🎨 UI Components
 
-    | Ecommerce UI Example 2                                                                                                                 |
-    | ------------------------------------------------------------------------------------------------------------------------------------- |
-    | <img width="600" alt="Screenshot_EcommerceUI2" src="https://github.com/user-attachments/assets/your-screenshot-2.png" /> |
-=======
-    | <imgwidth="600" alt="Screenshot_EcommerceUI" src="https://github.com/user-attachments/assets/18a425d1-9111-4aae-bbdb-571e51acfe03" /> |
+### 🔹 Navigation
 
-    | Ecommerce UI Example 2                                                                                                                 |
-    | ------------------------------------------------------------------------------------------------------------------------------------- |
-    | <img width="600" alt="Screenshot_EcommerceUI" src="https://github.com/user-attachments/assets/34afd6d5-63df-4f7f-99c9-9738c72c627d" /> |
->>>>>>> 1b2712cc8461c38df3dc280c6e6f4a415d1268f3
+* **Bottom Navigation Bar** – Home, Profile, Favorites
+* **AppBar** – With search and menu icons
 
-    ---
+### 🔹 Layout Sections
 
-    ## 🛠️ Dependencies
+* **Header Image** – Promotional product image/banner
+* **Categories** – Horizontally scrollable product categories
+* **Featured Products** – Grid of products with pricing and buttons
 
-    ```yaml
-    dependencies:
-    flutter:
-        sdk: flutter
-    cupertino_icons: ^1.0.8
-    font_awesome_flutter: ^10.9.0
+### 🔹 Interactions
 
-    dev_dependencies:
-    flutter_test:
-        sdk: flutter
-    flutter_lints: ^5.0.0
-    ```
+* **Add to Cart Button**
+* **Favorite/Wishlist Icon**
+* **Product Counter** for cart quantity adjustment
 
-    ---
+---
 
-    ## 📄 License
+## 📸 Screenshots
 
-<<<<<<< HEAD
-    This project is open-source and free to use for educational and personal projects.
-=======
-    This project is open-source and free to use for educational and personal projects.
->>>>>>> 1b2712cc8461c38df3dc280c6e6f4a415d1268f3
+| Ecommerce UI Example                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------- |
+| <img width="600" alt="Screenshot_EcommerceUI" src="https://github.com/user-attachments/assets/371ca17c-508f-4ffd-a97b-c25116af037d" /> |
+
+| Ecommerce UI Example 2                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------- |
+| <img width="600" alt="Screenshot_EcommerceUI" src="https://github.com/user-attachments/assets/1f86b9bb-5c2a-426e-9057-2e6a4a7d966d" /> |
+
+---
+
+## 🛠️ Dependencies
+
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  font_awesome_flutter: ^10.9.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+```
+
+---
+
+## 📄 License
+
+This project is open-source and free to use for **educational** and **personal projects**. Feel free to modify and build upon it.
+
+---
+
