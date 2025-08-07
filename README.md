@@ -133,11 +133,19 @@
 
     | Ecommerce UI Example                                                                                                                   |
     | ------------------------------------------------------------------------------------------------------------------------------------- |
+<<<<<<< HEAD
     | <img width="600" alt="Screenshot_EcommerceUI" src="https://github.com/user-attachments/assets/your-screenshot-1.png" /> |
 
     | Ecommerce UI Example 2                                                                                                                 |
     | ------------------------------------------------------------------------------------------------------------------------------------- |
     | <img width="600" alt="Screenshot_EcommerceUI2" src="https://github.com/user-attachments/assets/your-screenshot-2.png" /> |
+=======
+    | <imgwidth="600" alt="Screenshot_EcommerceUI" src="https://github.com/user-attachments/assets/18a425d1-9111-4aae-bbdb-571e51acfe03" /> |
+
+    | Ecommerce UI Example 2                                                                                                                 |
+    | ------------------------------------------------------------------------------------------------------------------------------------- |
+    | <img width="600" alt="Screenshot_EcommerceUI" src="https://github.com/user-attachments/assets/34afd6d5-63df-4f7f-99c9-9738c72c627d" /> |
+>>>>>>> 1b2712cc8461c38df3dc280c6e6f4a415d1268f3
 
     ---
 
@@ -160,4 +168,8 @@
 
     ## 📄 License
 
+<<<<<<< HEAD
     This project is open-source and free to use for educational and personal projects.
+=======
+    This project is open-source and free to use for educational and personal projects.
+>>>>>>> 1b2712cc8461c38df3dc280c6e6f4a415d1268f3
