@@ -51,6 +51,7 @@ class FeaturedProductsSection extends StatelessWidget {
           height: 14,
         ),
         GridView.builder(
+          padding: EdgeInsets.symmetric(horizontal: 8),
           physics: NeverScrollableScrollPhysics(),
           itemCount: products.length,
           shrinkWrap: true,

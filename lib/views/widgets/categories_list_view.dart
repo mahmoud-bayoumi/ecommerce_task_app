@@ -33,6 +33,7 @@ class CategoriesListView extends StatelessWidget {
     return SizedBox(
       height: 100,
       child: ListView.separated(
+        padding: EdgeInsets.only(left: 8),
         scrollDirection: Axis.horizontal,
         shrinkWrap: true,
         itemCount: icons.length,

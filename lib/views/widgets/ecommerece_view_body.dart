@@ -9,7 +9,6 @@ class EcommereceViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      padding: EdgeInsets.symmetric(horizontal: 8),
       child: Column(
         children: [
           CustomProductImage(),

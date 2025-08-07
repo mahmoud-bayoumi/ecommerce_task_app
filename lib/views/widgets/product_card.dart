@@ -27,7 +27,7 @@ class ProductCard extends StatelessWidget {
                 product.imageUrl,
                 width: 150,
                 height: 150,
-                fit: BoxFit.cover,
+                fit: BoxFit.fill,
               ),
               Text(
                 product.price,
