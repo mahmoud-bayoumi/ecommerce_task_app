@@ -9,7 +9,8 @@ class EcommerceView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        elevation: 0,
+        backgroundColor: Colors.white, 
+
         title: Row(
           children: [
             Icon(
