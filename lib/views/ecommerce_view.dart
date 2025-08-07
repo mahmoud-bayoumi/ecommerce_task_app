@@ -1,3 +1,4 @@
+import 'package:ecommerce_task_app/views/widgets/ecommerece_view_body.dart';
 import 'package:flutter/material.dart';
 
 class EcommerceView extends StatelessWidget {
@@ -28,7 +29,7 @@ class EcommerceView extends StatelessWidget {
           ],
         ),
       ),
-      body: Placeholder(),
+      body: EcommereceViewBody(),
     );
   }
 }
