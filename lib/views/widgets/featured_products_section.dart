@@ -1,4 +1,5 @@
 import 'package:ecommerce_task_app/models/product_model.dart';
+import 'package:ecommerce_task_app/views/featured_products_view.dart';
 import 'package:ecommerce_task_app/views/widgets/custom_section_header.dart';
 import 'package:ecommerce_task_app/views/widgets/product_card.dart';
 import 'package:flutter/material.dart';
@@ -60,7 +61,17 @@ class FeaturedProductsSection extends StatelessWidget {
     return Column(
       children: [
         headerExist!
-            ? CustomSectionHeader(sectionName: 'Featured products')
+            ? CustomSectionHeader(
+                sectionName: 'Featured products',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => FeaturedProductsView(),
+                    ),
+                  );
+                },
+              )
             : SizedBox.shrink(),
         SizedBox(
           height: 14,
