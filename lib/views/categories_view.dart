@@ -1,6 +1,8 @@
-import 'package:ecommerce_task_app/views/widgets/category_icon.dart';
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import 'widgets/categories_view_body.dart';
 
 class CategoriesView extends StatelessWidget {
   const CategoriesView({super.key});
@@ -47,33 +49,10 @@ class CategoriesView extends StatelessWidget {
           SizedBox(width: 10),
         ],
       ),
-      body: CustomScrollView(
-        physics: BouncingScrollPhysics(),
-        slivers: [
-          SliverToBoxAdapter(
-            child: SizedBox(
-              height: 25,
-            ),
-          ),
-          SliverGrid(
-          
-            delegate: SliverChildBuilderDelegate(
-              (BuildContext context, int index) {
-                return CategoryIcon(
-                  icon: icons[index],
-                  color: colors[index],
-                  category: categories[index],
-                );
-              },
-              childCount: icons.length,
-            ),
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 3,
-              crossAxisSpacing: 8.0,
-              mainAxisSpacing: 8.0,
-            ),
-          ),
-        ],
+      body: CategoriesViewBody(
+        icons: icons,
+        colors: colors,
+        categories: categories,
       ),
     );
   }

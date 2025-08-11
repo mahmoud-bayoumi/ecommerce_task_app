@@ -20,6 +20,7 @@ class _ProductCounterRowState extends State<ProductCounterRow> {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisSize: MainAxisSize.min,
       children: [
         IconButton(
           onPressed: () {

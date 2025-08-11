@@ -29,7 +29,9 @@ class ProductCard extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => ProductDetailsView(),
+                      builder: (context) => ProductDetailsView(
+                        productModel: product,
+                      ),
                     ),
                   );
                 },
@@ -70,7 +72,6 @@ class ProductCard extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              
             ],
           ),
         ),
