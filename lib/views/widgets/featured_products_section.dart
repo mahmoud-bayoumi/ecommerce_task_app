@@ -6,7 +6,9 @@ import 'package:flutter/material.dart';
 class FeaturedProductsSection extends StatelessWidget {
   const FeaturedProductsSection({
     super.key,
+    this.headerExist = true,
   });
+  final bool? headerExist;
   static const List<ProductModel> products = [
     ProductModel(
       imageUrl:
@@ -50,14 +52,16 @@ class FeaturedProductsSection extends StatelessWidget {
       detaildDescription:
           'Black grapes bring a delightful balance of sweetness and subtle tartness with each juicy bite. Known for their rich, deep purple color and smooth skin, these grapes are perfect for snacking, adding to salads, or incorporating into desserts. Naturally sweet and full of antioxidants, black grapes are a delicious and healthy way to satisfy your sweet tooth.',
       isAddedToCart: false,
-      quantity: null
+      quantity: null,
     ),
   ];
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        CustomSectionHeader(sectionName: 'Featured products'),
+        headerExist!
+            ? CustomSectionHeader(sectionName: 'Featured products')
+            : SizedBox.shrink(),
         SizedBox(
           height: 14,
         ),
@@ -73,9 +77,7 @@ class FeaturedProductsSection extends StatelessWidget {
             childAspectRatio: 0.52,
           ),
           itemBuilder: (context, index) {
-            return ProductCard(
-              product: products[index]
-            );
+            return ProductCard(product: products[index]);
           },
         ),
       ],
