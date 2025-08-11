@@ -15,6 +15,9 @@ class FeaturedProductsSection extends StatelessWidget {
       name: 'Fresh Peach',
       description: 'dozen',
       isAddedToCart: false,
+      quantity: null,
+      detaildDescription:
+          r'A symbol of summer’s sweetness, the peach delights with its juicy, fragrant flesh and soft, fuzzy skin. Each bite offers a balance of sweet and mildly tangy flavors, perfect for snacking or adding to a fresh fruit salad. Whether eaten raw, baked in a pie, or blended into a smoothie, peaches are a deliciously refreshing treat.',
     ),
     ProductModel(
       imageUrl:
@@ -24,6 +27,8 @@ class FeaturedProductsSection extends StatelessWidget {
       description: '2.0 lbs',
       isAddedToCart: true,
       quantity: 1,
+      detaildDescription:
+          'Creamy, rich, and versatile, avocado is the perfect addition to any dish. Its smooth, buttery texture and mild flavor make it ideal for spreading on toast, adding to salads, or blending into creamy guacamole. Full of healthy fats and nutrients, avocados are not only delicious but also packed with essential vitamins and minerals.',
     ),
     ProductModel(
       imageUrl:
@@ -32,7 +37,9 @@ class FeaturedProductsSection extends StatelessWidget {
       name: 'Pineapple',
       description: '1.50 lbs',
       isAddedToCart: true,
-      quantity: 1,  
+      quantity: 1,
+      detaildDescription:
+          'Bursting with tropical zest, pineapple is the ultimate refreshment. Its vibrant yellow flesh offers a bold, tangy sweetness with a hint of tartness, making it an irresistible snack on its own or a tropical twist in smoothies and fruit salads. The perfect combination of sweet and sour, pineapple is the go-to fruit for sunny days.',
     ),
     ProductModel(
       imageUrl:
@@ -40,7 +47,10 @@ class FeaturedProductsSection extends StatelessWidget {
       price: r'$7.05',
       name: 'Black Grapes',
       description: '5.0 lbs',
+      detaildDescription:
+          'Black grapes bring a delightful balance of sweetness and subtle tartness with each juicy bite. Known for their rich, deep purple color and smooth skin, these grapes are perfect for snacking, adding to salads, or incorporating into desserts. Naturally sweet and full of antioxidants, black grapes are a delicious and healthy way to satisfy your sweet tooth.',
       isAddedToCart: false,
+      quantity: null
     ),
   ];
   @override
@@ -64,16 +74,7 @@ class FeaturedProductsSection extends StatelessWidget {
           ),
           itemBuilder: (context, index) {
             return ProductCard(
-              product: ProductModel(
-                imageUrl: products[index].imageUrl,
-                price: products[index].price,
-                name: products[index].name,
-                description: products[index].description,
-                isAddedToCart: products[index].isAddedToCart,
-                quantity: products[index].isAddedToCart
-                    ? products[index].quantity
-                    : null,
-              ),
+              product: products[index]
             );
           },
         ),
