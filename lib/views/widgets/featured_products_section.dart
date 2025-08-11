@@ -31,7 +31,8 @@ class FeaturedProductsSection extends StatelessWidget {
       price: r'$9.90',
       name: 'Pineapple',
       description: '1.50 lbs',
-      isAddedToCart: false,
+      isAddedToCart: true,
+      quantity: 1,  
     ),
     ProductModel(
       imageUrl:

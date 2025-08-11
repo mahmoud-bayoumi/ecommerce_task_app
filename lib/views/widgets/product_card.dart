@@ -1,4 +1,5 @@
 import 'package:ecommerce_task_app/models/product_model.dart';
+import 'package:ecommerce_task_app/views/product_details_view.dart';
 import 'package:ecommerce_task_app/views/widgets/favorite_icon.dart';
 import 'package:ecommerce_task_app/views/widgets/product_counter_row.dart';
 import 'package:flutter/material.dart';
@@ -23,11 +24,21 @@ class ProductCard extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               FavoriteIcon(),
-              Image.network(
-                product.imageUrl,
-                width: 150,
-                height: 150,
-                fit: BoxFit.fill,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => ProductDetailsView(),
+                    ),
+                  );
+                },
+                child: Image.network(
+                  product.imageUrl,
+                  width: 150,
+                  height: 150,
+                  fit: BoxFit.fill,
+                ),
               ),
               Text(
                 product.price,
@@ -59,6 +70,7 @@ class ProductCard extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
+              
             ],
           ),
         ),
